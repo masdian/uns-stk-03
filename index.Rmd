@@ -1,0 +1,67 @@
+---
+title: "Statistika: Pertemuan 03"
+subtitle: "Statistika Deskripsi dan Eksplorasi (2)"
+author: "oleh Riana Hadiana"
+institute: "Universitas Serang Raya"
+#date: "updated: `r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    #css: [default, shinobi]
+    #css: [default, tamu, tamu-fonts]
+    #css: [default, uo, uo-fonts]
+    #css: [default, duke-blue]
+    #css: [default, hygge-duke]
+    #css: [default, hygge]
+    #css: [default, kunoichi]
+    #css: [default, lucy, lucy-fonts]
+    #css: [default, metropolis, metropolis-fonts]
+    #css: [default, middlebury, middlebury-fonts]
+    #css: [default, ninjutsu]
+    #css: [default, rladies, rladies-fonts]
+    #css: [default, robot, robot-fonts]
+    #css: [default, rutgers, rutgers-fonts]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+---
+
+```{r xaringanExtra, echo=FALSE}
+xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css", "tachyons"))
+```
+
+```{r xaringan-panelset, echo=FALSE}
+xaringanExtra::use_panelset()
+```
+
+```{r xaringan-scribble, echo=FALSE}
+xaringanExtra::use_scribble()
+```
+
+```{r xaringan-logo, echo=FALSE}
+xaringanExtra::use_logo(
+  image_url = "Unsera.png"
+)
+```
+
+```{r xaringanExtra-webcam, echo=FALSE}
+xaringanExtra::use_webcam()
+```
+
+```{r xaringanExtra-search, echo=FALSE}
+xaringanExtra::use_search(show_icon = TRUE)
+```
+
+
+.pull-right[
+
+<br><br><br><br><br><br><br><br><br>
+
+# Bagaiamana cara .red[**penyajian**] datanya?
+
+]
+
+---
+
