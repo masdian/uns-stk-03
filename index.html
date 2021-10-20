@@ -4,7 +4,7 @@
     <title>Statistika: Pertemuan 03</title>
     <meta charset="utf-8" />
     <meta name="author" content="oleh Riana Hadiana" />
-    <script src="libs/header-attrs-2.11/header-attrs.js"></script>
+    <script src="libs/header-attrs-2.10/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
     <link href="libs/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
@@ -111,6 +111,8 @@ top:1em;right:1em;
 
 ]
 
+--
+
 .pull-right[
 
 ## Jenis ukuran pemusatan data
@@ -136,6 +138,9 @@ top:1em;right:1em;
 1. ### Mudah terpengaruh oleh adanya pencilan
 
 ]
+
+--
+
 .pull-right[
 
 ### Rata-rata populasi
@@ -177,6 +182,8 @@ $$
 $$
 ]
 
+--
+
 .pull-right[
 
 **Contoh 2**
@@ -214,6 +221,8 @@ $$
 ### Median tidak terpengaruh oleh adanya pencilan
 
 ]
+
+--
 
 .pull-right[
 
@@ -336,6 +345,8 @@ Jadi, .red[**median resisten terhadap pencilan**] sedangkan .red[**rata-rata tid
 - ### `\(Q_2\)` (kuartil 2 atau .red[**median**]) adalah nilai yang membagi data 50% di kiri dan 50% di kanan
 ]
 
+--
+
 .pull-right[
 
 - ### `\(Q_3\)` (kuartil 3) adalah nilai yang membagi data 75% di kiri dan 25% di kanan
@@ -452,6 +463,8 @@ Karena `\(n=6\)` (genap), maka kumpulan data langsung dibagi menjadi dua kelompo
 
 ]
 
+--
+
 .pull-right[
 
 &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
@@ -493,6 +506,8 @@ Lihat kembali data pada **Contoh 6** yang sudah terurut.
 `\(X_1 \hspace{0.6cm}X_2 \hspace{0.8cm}X_3 \hspace{0.9cm}X_4 \hspace{0.8cm}X_5 \hspace{0.8cm}X_6\)`
 
 ]
+
+--
 
 .pull-right[
 Posisi kuartil ke-1 adalah `\(\dfrac{1(n+1)}{4}=1.75\)`, maka `\(a=1\)` dan `\(b=75\)`
@@ -647,6 +662,20 @@ Buatlah statistik 5 serangkai untuk data &lt;br&gt;pada **Soal 6** menggunakan i
 .pull.center[
 # Ukuran Penyebaran Data
 ]
+--
+.pull.center[
+### .red[**Mengapa diperlukan ukuran penyebaran?**]
+]
+
+--
+.pull.center[
+![](gb_09.jpg)
+]
+---
+
+.pull.center[
+# Ukuran Penyebaran Data
+]
 .pull-left[
 ## Jangkauan (*range*)
 
@@ -657,6 +686,8 @@ nilai antara dua nilai tersebut tidak diperhitungkan
 - Resisten terhadap nilai yang ekstrim
 
 ]
+
+--
 
 .pull-right[
 
@@ -696,6 +727,8 @@ Data setelah diurutkan dari terkecil ke terbesar
 
 ]
 
+--
+
 .pull-right[
 &lt;br&gt;&lt;br&gt;
 - Median
@@ -706,10 +739,486 @@ Data setelah diurutkan dari terkecil ke terbesar
   Karena banyaknya data adalah **genap**, data terurut bisa langsung dibagi menjadi dua kelompok.
   
   `\(\underbrace{X_1 \hspace{1cm}...\hspace{1cm}{X_{10}}}_{\text{Kelompok 1}} \hspace{1cm}\underbrace{X_{11} \hspace{1cm}...\hspace{1cm}{X_{20}}}_{\text{Kelompok 2}}\)`
+  
+  ......_**silakan dilanjutkan**_.....
 - Jangkauan
 - Jangkauan Antar Kuartil
 - Statistik 5 Serangkai
 ]
+
+---
+
+.pull.center[
+# **Ragam (Variansi)**
+]
+
+.pull-left[
+
+### Jumlah kuadrat selisih antara setiap observasi dengan pusatnya (rata-rata)
+
+|No| `\(X\)` | `\(X-\mu\)` | `\((X-\mu)^2\)`|
+|:-:|:-:|:-:|:-:|
+|1|4|-2|4|
+|2|5|-1|1|
+|3|6|0|0|
+|4|7|1|1|
+|5|8|2|4|
+| Rata-rata |6| 0 |2|
+
+]
+
+.pull-right[
+
+- ### `\(X-\mu\)` &lt;br&gt;adalah .red[simpangan] (deviasi): selisih dari data terhadap rataannya
+
+- ### Rata-rata `\((X-\mu)^2=2\)` &lt;br&gt; adalah .red[ragam] (variansi): jumlah kuadrat dari deviasi di sekitar rataannya
+]
+
+---
+
+.pull.center[
+# **Ragam (variansi)**
+]
+
+.pull-left[
+### Diketahui sekumpulan data berukuran `\(N\)` dari sebuah populasi
+### `$$x_1, x_2, x_3, ..., x_N$$`
+### dengan rata-rata `\(\mu\)`. Dari populasi tersebut diambil contoh (sampel) berukuran `\(n\)` `\((n&lt;N)\)`
+### `$$x_1, x_2, x_3, ..., x_n$$`
+### dengan rata-rata `\(\bar{x}\)`
+]
+
+--
+
+.pull-right[
+
+### .blue[**Ragam Populasi**] `\(\rightarrow{\text{parameter}}\)`
+
+### `$$\sigma^2=\sum_{i=1}^{N}\dfrac{(x_i-\mu)^2}{N}$$`
+
+### .blue[**Ragam Contoh**] `\(\rightarrow{\text{statistik}}\)`
+
+### `$$s^2=\sum_{i=1}^{n}\dfrac{(x_i-\bar{x})^2}{n-1}$$`
+]
+
+---
+
+.pull.center[
+# **Simpangan Baku (Standard Deviation)**
+
+.pull.left[
+### Akar kuadrat dari ragam. Ragam merupakan ukuran jarak kuadrat, sehingga untuk mendapatkan jarak yang sebenarnya adalah dengan mengakarkan ragam.
+]
+]
+
+.pull-left[
+### Simpangan baku Populasi
+### `$$\underbrace{\sigma=\sqrt{\sum_{i=1}^{N}\dfrac{(x_i-\mu)^2}{N}}}_{\text{parameter}}$$`
+]
+
+.pull-right[
+### Simpangan baku Contoh
+### `$$\underbrace{s=\sqrt{\sum_{i=1}^{n}\dfrac{(x_i-\bar{x})^2}{n-1}}}_{\text{statistik}}$$`
+]
+
+---
+.pull-left[
+**Contoh 10**
+
+Diketahui kumpulan data berikut
+
+`$$50 \hspace{1cm}60 \hspace{1cm}70 \hspace{1cm}80 \hspace{1cm}90$$`
+Tentukan.
+1. Ragam dan simpangan baku populasi jika data di atas dianggap sebagai data seluruh populasi
+1. Ragam dan simpangan baku sampel jika data di atas dianggap sebagai data sampel
+
+_Penyelesaian_
+
+1. **Populasi**&lt;br&gt;
+  Diketahui banyaknya anggota populasi `\(N=5\)`, maka
+  `$$\mu=\dfrac{50+60+70+80+90}{5}=70$$`
+   
+
+
+]
+
+--
+
+.pull-right[
+&lt;br&gt;
+  ragam populasi
+`$$\begin{align*}
+  \sigma^2&amp;=\sum_{i=1}^{N}\dfrac{(x_i-\mu)^2}{N}\\
+  &amp;=\dfrac{(50-70)^2+(60-70)^2+...+(90-70)^2}{5}\\
+  &amp;=\dfrac{1000}{5}=200
+  \end{align*}$$`
+  
+  simpangan baku populasi
+  
+  `\(\sigma=\sqrt{\sigma^2}=\sqrt{200}=14.14\)`
+  
+2.** Sampel**
+  &lt;br&gt;Karena data sampel sama dengan data &lt;br&gt;populasi, maka `\(n=5\)` dan `\(\bar{x}=70\)`, sehingga
+`$$\begin{align*}
+s^2&amp;=\sum_{i=1}^{n}\dfrac{(x_i-\bar{x})^2}{n-1}=\dfrac{1000}{4}=250\\
+s&amp;=\sqrt{250}=15.81
+\end{align*}$$`
+]
+---
+
+.pull.center[
+# **Diagram Kotak Garis (Box Plot)**
+]
+
+--
+
+## Diagram yang memvisualkan statistik 5 serangkai. Informasi yang diperoleh dari diagram kotak garis:
+
+--
+- ###Melihat ukuran penyebaran dan ukuran pemusatan data
+
+--
+- ###Melihat adanya data pencilan
+
+--
+- ###Sebagai alat pembandingan sebaran dua kelompok data atau lebih
+
+
+---
+
+.pull.center[
+# **Diagram Kotak Garis (Box Plot)**
+
+
+![](gb_10.jpg)
+]
+
+
+---
+
+.pull.center[
+# **Langkah Pembuatan Box plot**
+]
+
+1. Hitung Statistik lima serangkai&lt;br&gt;&lt;br&gt;
+1. Hitung **Batas Atas** `\((BA)\)` `\(\rightarrow BA=Q_3 + 1.5(Q_3-Q_1)\)`&lt;br&gt;&lt;br&gt;
+1. Hitung **Batas Bawah** `\((BB)\)` `\(\rightarrow BB=Q_1 - 1.5(Q_3-Q_1)\)`&lt;br&gt;&lt;br&gt;
+1. Identifikasi data. Jika data `\(&lt; BB\)` atau data `\(&gt; BA\)` maka data dikatakan _outlier_ (pencilan)&lt;br&gt;&lt;br&gt;
+1. Gambar kotak dengan batas `\(Q_1\)` dan `\(Q_3\)`&lt;br&gt;&lt;br&gt;
+1. Jika tidak ada pencilan : Tarik garis dari `\(Q_1\)` sampai data terkecil dan tarik garis dari `\(Q_3\)` sampai data terbesar&lt;br&gt;&lt;br&gt;
+1. Jika ada pencilan : Tarik garis Q1 dan atau Q3 sampai data sebelum pencilan&lt;br&gt;&lt;br&gt;
+1. Pencilan digambarkan dengan **asterik**
+
+---
+.pull-left[
+**Contoh 11**
+
+Investigation was conducted to investigate the sodium level
+in 20 breakfast cereals The observations (in mg) are
+
+![](gb_07.jpg)
+
+Construct a box plot for the cereal sodium level value.
+
+_Penyelesaian_
+
+Data pada soal ini adalah data yang sama dengan data pada **Contoh 9**. Berdasarkan hasil pada **Contoh 9** didapat nilai statistik 5 serangkai sebagai berikut:
+
+`\(x_{min}=0\)`, `\(x_{max}=340\)`, `\(Q_1=135\)`, `\(Q_2=180\)`, dan `\(Q_3=205\)` 
+
+]
+
+--
+
+.pull-right[
+
+- Batas Atas: 
+`$$\begin{align*}
+  BA&amp;=Q_3+1.5(Q_3-Q_1)\\
+  &amp;=205+1.5(205-135)\\
+  &amp;=205+105=310
+  \end{align*}$$`
+- Batas Bawah
+`$$BB=Q_1-1.5(Q_3-Q_1)=135-105=30$$`
+- Terdapat data di bawah BB, yaitu `\(0\)`. Dan data di atas BA, yaitu `\(340\)`. `\(0\)` dan `\(340\)` bisa dikatakan sebagai pencilan.
+
+![](gb_11.jpg)
+]
+
+---
+
+.pull.center[
+# **Data Dikelompokkan**
+]
+
+.pull-left[
+
+Diketahui modal dari 40 perusahan (dalam milyar rupiah) berikut.
+
+|Modal    |Frekuensi|
+|:-:      |:-:      |
+|118 - 126|3        |
+|127 - 135|5        |
+|136 - 144|9        |
+|145 - 153|12       |
+|154 - 162|5        |
+|163 - 171|4        |
+|172 - 180|2        |
+|Jumlah   |40       |
+
+]
+
+--
+
+.pull-right[
+
+- ###Berapa rata-rata modal perusahan-perusahaan tersebut?
+- ###Berapa kuartil 1 modal perusahan-perusahaan tersebut?
+- ###Tentukan modus dari modal perusahan-perusahaan tersebut?
+- ###.red[**Dapatkah kita menjawab pertanyaan-pertanyaan di atas dengan tepat?**]
+
+]
+---
+
+.pull.center[
+# **Data Dikelompokkan**
+]
+
+.pull-left[
+
+Diketahui modal dari 40 perusahan (dalam milyar rupiah) berikut.
+
+|Modal    |Frekuensi|
+|:-:      |:-:      |
+|118 - 126|3        |
+|127 - 135|5        |
+|136 - 144|9        |
+|145 - 153|12       |
+|154 - 162|5        |
+|163 - 171|4        |
+|172 - 180|2        |
+|Jumlah   |40       |
+
+]
+
+--
+
+.pull-right[
+
+- ###Jika data sudah disajikan dalam tabel data berkelompok dan kita tidak memiliki data asalnya, maka ukuran pemusatan data () dan ukuran penyebaran data () .red[**tidak dapat ditentukan dengan pasti**].
+- ###Ukuran pemusatan data dan ukuran penyebaran data .red[**hanya bisa ditentukan menggunakan perkiraan**].
+
+]
+
+---
+
+.pull.center[
+# **Rata-rata**
+]
+
+.pull-left[
+
+Susun ulang tabel seperti berikut.
+
+|Modal    |Frek `\((f_i)\)`|Nilai Tengah `\((x_i)\)`| `\(f_ix_i\)` |
+|:-:      |:-:      |:-:  |:-:  |
+|118 - 126|3        |122  |366  |
+|127 - 135|5        |131  |655  |
+|136 - 144|9        |140  |1260 |
+|145 - 153|12       |149  |1788 |
+|154 - 162|5        |158  |790  |
+|163 - 171|4        |167  |668  |
+|172 - 180|2        |176  |352  |
+| `\(\sum\)`  |40       | `\(\sum\)` |5879 |
+
+]
+
+--
+
+.pull-right[
+
+Perkiraan rata-rata untuk data berkelompok:
+`$$\begin{align*}
+\bar{x}&amp;=\dfrac{\sum{f_ix_i}}{\sum{f_i}}=\dfrac{5879}{40}=146.98
+\end{align*}$$`
+
+Jadi, rata-rata modal dari 40 perusahaan tersebut diperkirakan sebesar `\(146.98\)` milyar rupiah.
+]
+
+---
+
+.pull.center[
+# **Ragam dan Simpangan Baku Populasi**
+]
+
+.pull-left[
+
+Susun ulang tabel seperti berikut.
+
+|Modal    | `\(f_i\)` | `\(d_i\)` | `\(d_i^2\)` | `\(f_id_i\)` | `\(f_id_i^2\)`  |
+|:-:      |:-:      |:-:|:-:|:-:  |:-:
+|118 - 126|3        |-3 |9  |-9   |27
+|127 - 135|5        |-2 |4  |-10  |20
+|136 - 144|9        |-1 |1  |-9   |9
+|145 - 153|12       |0  |0  |0    |0
+|154 - 162|5        |1  |1  |5    |5
+|163 - 171|4        |2  |4  |8    |16
+|172 - 180|2        |3  |9  |6    |18
+| `\(\sum\)`  |40       |   |28 |-9   |95
+
+]
+
+--
+
+.pull-right[
+
+Diketahui lebar kelas `\(c=9\)`, maka ragam
+`$$\begin{align*}
+\sigma^2&amp;=c^2 \left(\dfrac{\sum {f_id_i^2}}{N} - \left( \dfrac{\sum{f_id_i}}{N}\right)^2 \right) \\
+&amp;=9^2 \left(\dfrac{95}{40} - \left( \dfrac{-9}{40}\right)^2 \right)\\
+&amp;=188.27
+\end{align*}$$`
+
+sehingga simpangan baku-nya
+
+`$$\sigma=\sqrt{\sigma^2}=\sqrt{188.27}=13.72$$`
+
+]
+
+
+---
+
+.pull.center[
+# **Ragam dan Simpangan Baku Sampel**
+]
+
+.pull-left[
+
+Susun ulang tabel seperti berikut.
+
+|Modal    | `\(f_i\)` | `\(d_i\)` | `\(d_i^2\)` | `\(f_id_i\)` | `\(f_id_i^2\)`  |
+|:-:      |:-:      |:-:|:-:|:-:  |:-:
+|118 - 126|3        |-3 |9  |-9   |27
+|127 - 135|5        |-2 |4  |-10  |20
+|136 - 144|9        |-1 |1  |-9   |9
+|145 - 153|12       |0  |0  |0    |0
+|154 - 162|5        |1  |1  |5    |5
+|163 - 171|4        |2  |4  |8    |16
+|172 - 180|2        |3  |9  |6    |18
+| `\(\sum\)`  |40       |   |28 |-9   |95
+
+]
+
+--
+
+.pull-right[
+
+Diketahui lebar kelas `\(c=9\)`, maka ragam
+`$$\begin{align*}
+s^2&amp;=c^2 \left(\dfrac{\sum {f_id_i^2}}{n-1} - \left( \dfrac{\sum{f_id_i}}{n-1}\right)^2 \right) \\
+&amp;=\dots\\
+&amp;=\dots
+\end{align*}$$`
+
+sehingga simpangan baku-nya
+
+`$$s=\sqrt{s^2}=\sqrt{\dots}=\dots$$`
+
+_silakan dicoba sendiri_
+]
+
+---
+
+.pull.center[
+# **Modus**
+]
+
+.pull-left[
+
+Susun ulang tabel seperti berikut.
+
+|Modal    |Frek `\((f_i)\)`|| 
+|:-:      |:-:      |:-:|
+|118 - 126|3        |  |
+|127 - 135|5        |  |
+|136 - 144|9        |_**3**_ |
+|145 - 153|_**12**_ |  |
+|154 - 162|5        |_**7**_ |
+|163 - 171|4        |  |
+|172 - 180|2        |  |
+| `\(\sum\)`  |40       |  |
+
+]
+
+--
+
+.pull-right[
+
+Perkiraan *modus* berada pada kelas dengan frekuensi terbesar, yaitu kelas ke-4 (145 - 153).
+
+`$$\begin{align*}
+\text{Modus}&amp;=M_0+c\left(\dfrac{f_B}{f_B+f_A} \right) \\
+&amp;=144.5+9\left(\dfrac{3}{3+7} \right) \\
+&amp;=144.5+9\left(\dfrac{3}{10} \right)\\
+&amp;=147.2
+\end{align*}$$`
+]
+
+
+---
+
+.pull.center[
+# **Kuartil**
+]
+
+.pull-left[
+
+Susun ulang tabel seperti berikut.&lt;br&gt;&lt;br&gt;
+
+|Modal    |Frek `\((f_i)\)`|
+|:-:      |:-:      |
+|118 - 126|3        |
+|127 - 135|5        |
+|136 - 144|_**9**_        |
+|145 - 153|12 |
+|154 - 162|5        |
+|163 - 171|4        |
+|172 - 180|2        |
+| `\(\sum\)`  |40       |
+
+]
+
+--
+
+.pull-right[
+
+`\(L_0\)` adalah batas bawah kelas yang memuat `\(Q_i\)`
+
+`$$\begin{align*}
+Q_i&amp;=L_0+c\left(\dfrac{\dfrac{in}{4}-\sum{f_{BQ}}}{f_Q} \right) \\
+Q_1&amp;=135.5+9\left(\dfrac{\dfrac{1(40)}{4}-8}{9} \right) \\
+&amp;=135.5+9\left(\dfrac{10-8}{9} \right)\\
+&amp;=137.5
+\end{align*}$$`
+
+Coba cari `\(Q_2\)` dan `\(Q_3\)`!
+]
+
+---
+
+.pull.center[
+# **Tugas Kelompok**
+]
+
+- ##**Bentuklah kelompok beranggotan 2 orang**
+- ##**Rincian tugas akan dikirimkan ke group whatsapp**
+
+---
+
+class: inverse, middle, center
+
+# **.red[Thank] .green[you]!**
+# **.purple[See] .blue[you] .yellow[next] week**
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
