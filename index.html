@@ -228,11 +228,11 @@ $$
 
 ### Langkah-langkah menentukan Median
 
-1. ###Urutkan data dari terkecil ke terbesar
-1. ###Jika banyaknya data ganjil,
+- ###Urutkan data dari terkecil ke terbesar
+- ###Jika banyaknya data ganjil,
 
 `$$\text{Median}=X_\frac{n+1}{2}$$`
-1. ###Jika banyaknya data genap,
+- ###Jika banyaknya data genap,
 
 `$$\text{Median}=\dfrac{X_\frac{n}{2}+X_{\frac{n}{2}+1}}{2}$$`
 ]
@@ -250,7 +250,7 @@ Tentukan median untuk data pada **Contoh 1**.
 Urutkan data dari terkecil ke terbesar
 
 `\(80 \hspace{1cm}85 \hspace{1cm}85 \hspace{1cm}85 \hspace{1cm}90\)`&lt;br&gt;
-`\(X_1 \hspace{0.8cm}X_2 \hspace{0.8cm}X_3 \hspace{0.9cm}X_4 \hspace{0.8cm}X_5\)`
+`\(X_1 \hspace{0.8cm}X_2 \hspace{0.9cm}X_3 \hspace{0.9cm}X_4 \hspace{0.8cm}X_5\)`
 
 Karena banyaknya data `\(n=5\)` (ganjil), maka
 
@@ -277,7 +277,7 @@ Tentukan median untuk data berikut
 Data setelah diurutkan
 
 `\(1 \hspace{1cm}2 \hspace{1cm}3 \hspace{1cm}4 \hspace{1cm}8 \hspace{1cm}8\)`&lt;br&gt;
-`\(X_1 \hspace{0.4cm}X_2 \hspace{0.5cm}X_3 \hspace{0.5cm}X_4 \hspace{0.5cm}X_5 \hspace{0.5cm}X_6\)`
+`\(X_1 \hspace{0.5cm}X_2 \hspace{0.5cm}X_3 \hspace{0.5cm}X_4 \hspace{0.5cm}X_5 \hspace{0.5cm}X_6\)`
 
 Karena banyaknya data `\(n=6\)` (genap), maka
 
@@ -302,7 +302,7 @@ Karena banyaknya data `\(n=6\)` (genap), maka
 Perhatikan kembali data pada **Contoh 1**.
 
 `\(80 \hspace{1cm}85 \hspace{1cm}85 \hspace{1cm}85 \hspace{1cm}90\)`&lt;br&gt;
-`\(X_1 \hspace{0.8cm}X_2 \hspace{0.8cm}X_3 \hspace{0.9cm}X_4 \hspace{0.8cm}X_5\)`
+`\(X_1 \hspace{0.8cm}X_2 \hspace{0.9cm}X_3 \hspace{0.9cm}X_4 \hspace{0.8cm}X_5\)`
 
 Data tersebum memiliki nilai rata-rata yang sama dengan Median, yaitu 85.
 
@@ -317,7 +317,7 @@ Apa yang terjadi dengan rata-rata dan median jika data terkecil diganti dengan `
 .pull-right[
 
 `\(10 \hspace{1cm}85 \hspace{1cm}85 \hspace{1cm}85 \hspace{1cm}90\)`&lt;br&gt;
-`\(X_1 \hspace{0.8cm}X_2 \hspace{0.8cm}X_3 \hspace{0.9cm}X_4 \hspace{0.8cm}X_5\)`
+`\(X_1 \hspace{0.8cm}X_2 \hspace{0.9cm}X_3 \hspace{0.9cm}X_4 \hspace{0.8cm}X_5\)`
 
 Setelah `\(X_1\)` diganti menjadi `\(10\)`, mediannya tetap `\(85\)` dan rata-ratanya adalah
 
@@ -1175,15 +1175,15 @@ Perkiraan *modus* berada pada kelas dengan frekuensi terbesar, yaitu kelas ke-4 
 
 Susun ulang tabel seperti berikut.&lt;br&gt;&lt;br&gt;
 
-|Modal    |Frek `\((f_i)\)`|
-|:-:      |:-:      |
-|118 - 126|3        |
-|127 - 135|5        |
-|136 - 144|_**9**_        |
-|145 - 153|12 |
-|154 - 162|5        |
-|163 - 171|4        |
-|172 - 180|2        |
+|Modal    |Frek `\((f_i)\)`| Frek Kum|
+|:-:      |:-:      |:-:|---
+|118 - 126|3        |3
+|127 - 135|5        |8
+|136 - 144|9        |17
+|145 - 153|12       |29
+|154 - 162|_**5**_  |34   |Posisi `\(Q_3\)`
+|163 - 171|4        |38
+|172 - 180|2        |40
 | `\(\sum\)`  |40       |
 
 ]
@@ -1192,18 +1192,54 @@ Susun ulang tabel seperti berikut.&lt;br&gt;&lt;br&gt;
 
 .pull-right[
 
-`\(L_0\)` adalah batas bawah kelas yang memuat `\(Q_i\)`
+Misalkan akan dicari `\(Q_3\)`. Posisi `\(Q_3\)` adalah data ke `\(\dfrac{in}{4}=\dfrac{3(40)}{4}=30\)`
+
+Data ke-29 terletak pada kelas ke-4, sehingga data ke-30 pasti berada pada kelas ke-5 atau dalam interval `\(154-162\)`.
+
+Rumus yang digunakan untuk menentukan kuartil ke-i atau `\(Q_i\)` adalah
+
+`$$Q_i=L_0+c\left( \dfrac{ \dfrac{in}{4}-\sum{f_{BQ}}}{f_Q}\right)$$`
+
+dengan `\(L_0\)` adalah batas bawah kelas yang memuat `\(Q_i\)`
+
+]
+
+---
+
+.pull.center[
+# **Kuartil**
+]
+
+.pull-left[
+
+Susun ulang tabel seperti berikut.&lt;br&gt;&lt;br&gt;
+
+|Modal    |Frek `\((f_i)\)`| Frek Kum|
+|:-:      |:-:      |:-:|---
+|118 - 126|3        |3
+|127 - 135|5        |8
+|136 - 144|9        |17
+|145 - 153|12       |29
+|154 - 162|_**5**_  |34   |Posisi `\(Q_3\)`
+|163 - 171|4        |38
+|172 - 180|2        |40
+| `\(\sum\)`  |40       |
+
+]
+
+--
+
+.pull-right[
 
 `$$\begin{align*}
 Q_i&amp;=L_0+c\left(\dfrac{\dfrac{in}{4}-\sum{f_{BQ}}}{f_Q} \right) \\
-Q_1&amp;=135.5+9\left(\dfrac{\dfrac{1(40)}{4}-8}{9} \right) \\
-&amp;=135.5+9\left(\dfrac{10-8}{9} \right)\\
-&amp;=137.5
+Q_1&amp;=135.5+9\left(\dfrac{\dfrac{3(40)}{4}-29}{5} \right) \\
+&amp;=135.5+9\left(\dfrac{30-29}{5} \right)\\
+&amp;=137.3
 \end{align*}$$`
 
-Coba cari `\(Q_2\)` dan `\(Q_3\)`!
+Coba cari `\(Q_1\)` dan `\(Q_2\)`!
 ]
-
 ---
 
 .pull.center[
